@@ -1,0 +1,55 @@
+package JavaOperators;
+import java.util.*;
+class Dog{
+	String name;
+	String says;
+}
+enum Signal {
+    GREEN, YELLOW, RED
+}
+
+
+public class TestDog {
+	 Signal color = Signal.RED;
+
+	    public void change() {
+	        switch (color) {
+	        case RED:
+	            color = Signal.GREEN;
+	            break;
+	        case YELLOW:
+	            color = Signal.RED;
+	            break;
+	        case GREEN:
+	            color = Signal.YELLOW;
+	            break;
+	        }
+	    }
+	public static void main(String[] arguments){
+		Dog dog1 = new Dog();
+		Dog dog2 = new Dog();
+		dog1.name = "spot";
+		dog1.says = "Ruff!";
+		dog2.name = "scruffy";
+		dog2.says = "Wurf!";
+		System.out.println(dog1.name);
+		System.out.println(dog1.says);
+		System.out.println(dog2.name);
+		System.out.println(dog2.says);
+		//Dog dog3 = dog1;
+		Dog dog3 = new Dog();
+		dog3 = dog1;
+		System.out.println(dog3.name);
+		System.out.println(dog3.says);
+		System.out.println(dog3.equals(dog1));
+		System.out.println(dog3==dog1);
+		dog3.name = "POPO";
+		dog3.says = "ooO";
+		System.out.println(dog1.name);
+		System.out.println(dog1.says);
+		
+		TestDog lq = new TestDog();
+		
+	}
+
+}

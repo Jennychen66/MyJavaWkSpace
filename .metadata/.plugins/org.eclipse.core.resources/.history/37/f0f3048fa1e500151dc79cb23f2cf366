@@ -1,0 +1,12 @@
+package JavaOperators;
+import java.util.*;
+class Dog{
+	String name;
+	String says;
+}
+public class TestDog {
+	public static void main(){
+		
+	}
+
+}
